@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('Screenshot (20).png');
+            background-size: cover; /* Per adattare l'immagine alla dimensione dello schermo */
+        }
+    
+        div {
+            background-color: rgba(255, 255, 255, 0.8); /* Aggiunto un'opacità al background per mantenere la leggibilità del testo */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+    
+        h2 {
+            color: #333;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        /* Label blu */
+        label.blue {
+            color: blue;
+        }
+    
+        /* Label rosso */
+        label.red {
+            color: red;
+        }
+    
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+    
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione e Login Utente</title>
+</head>
+<body>
+    <div>
+        <h2>Registrazione Utente</h2>
+        <form id="registrationForm">
+            <label class="blue" for="regUsername">Username:</label>
+            <input type="text" id="regUsername" name="regUsername" required>
+
+            <label class="red" for="regPassword">Password:</label>
+            <input type="password" id="regPassword" name="regPassword" required>
+
+            <button type="button" onclick="registerUser()">Registrati</button>
+        </form>
+    </div>
+
+    <div>
+        <h2>Login Utente</h2>
+        <form id="loginForm">
+            <label class="blue" for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="loginUsername" required>
+
+            <label class="red" for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+
+            <button type="button" onclick="loginUser()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function registerUser() {
+            var regUsername = document.getElementById("regUsername").value;
+            var regPassword = document.getElementById("regPassword").value;
+
+            // Simulazione di un invio al server (da implementare lato server).
+            console.log('Registrazione:', regUsername, regPassword);
+
+            // Aggiungi qui la logica per inviare i dati al server per la registrazione.
+            alert('Registrazione riuscita!');
+        }
+
+        function loginUser() {
+            var loginUsername = document.getElementById("loginUsername").value;
+            var loginPassword = document.getElementById("loginPassword").value;
+
+            // Simulazione di un invio al server (da implementare lato server).
+            console.log('Login:', loginUsername, loginPassword);
+
+            // Aggiungi qui la logica per inviare i dati al server per il login.
+            alert('Login riuscito!');
+        }
+    </script>
+</body>
+</html>
